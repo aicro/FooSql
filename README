@@ -21,7 +21,7 @@ BUILD AND INSTALL
 3. Do the following commands
 mkdir build
 cd build
-cmake CMAKE_INSTALL_PREFIX=<бн> .. (or to identify CMAKE_BUILD_EXAMPLES=on to build all examples)
+cmake CMAKE_INSTALL_PREFIX=<...> .. (or to identify CMAKE_BUILD_EXAMPLES=on to build all examples)
 make
 make install 
 
@@ -76,10 +76,10 @@ Note that the EndAction and Disconnect will be automatically done by the de-cons
 About Batch INSERT/REPLACE operations
 ***************************
 We can assign multiple values in a SQL INSERT, REPLACE(MYSQL)/MERGE INTO(DB2) statements such as
-insert into бн values (бн), (бн), (бн)
-replace into бн values (бн), (..), (бн)
-merge into бн using ( values(бн), (бн) ) бн
+insert into ... values (...), (...), (...)
+replace into ... values (...), (..), (...)
+merge into ... using ( values(...), (...) ) ...
 
-The library has provided some methods to easily handle these issues. Details can be found in the examples. In the codes, you do not need to implement the SQL statement, just providing columnsбп names and there corresponding values. The library will component the statements related the underlying DB and send to the server as soon as the count of values are met the limits you have identified.
+The library has provided some methods to easily handle these issues. Details can be found in the examples. In the codes, you do not need to implement the SQL statement, just providing columns names and there corresponding values. The library will component the statements related the underlying DB and send to the server as soon as the count of values are met the limits you have identified.
 
 Unfortunately, the performance of batch operations are not good. After analysing by the result of gprof, too much time are wasted in the copy of column and values. In the future version, I will find better ways to handle them.
