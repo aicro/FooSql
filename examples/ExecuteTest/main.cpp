@@ -11,21 +11,21 @@ using namespace COMMON::EXCEPTION;
 
 int main()
 {
-	DbLocation dbLocation1;
-	dbLocation1.SetDbId("TEST_DB1");
+    DbLocation dbLocation1;
+    dbLocation1.SetDbId("TEST_DB1");
     dbLocation1.SetIp("127.0.0.1");
     dbLocation1.SetPort("3306");
     dbLocation1.SetUser("root");
     dbLocation1.SetPassword("123456");
 
-	DbLocation dbLocation2;
+    DbLocation dbLocation2;
     dbLocation2.SetDbId("TEST_DB2");
     dbLocation2.SetIp("127.0.0.1");
     dbLocation2.SetPort("3306");
     dbLocation2.SetUser("root");
     dbLocation2.SetPassword("123456");
     
-	DbLocation dbLocation3;
+    DbLocation dbLocation3;
     dbLocation3.SetDbId("TEST_DB3");
     dbLocation3.SetIp("127.0.0.1");
     dbLocation3.SetPort("3306");
@@ -58,5 +58,5 @@ int main()
         cout << "unknown exception" << std::endl;
     }
 	
-	return 0;
+    return 0;
 }
